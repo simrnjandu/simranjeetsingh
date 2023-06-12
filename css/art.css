@@ -39,6 +39,10 @@ body {
     font-size: 2.7rem;
     max-width: 20ch;
   }
+
+  h3 {
+    color: #00abf0;
+    }
   
   p {
     max-width: 60ch;
