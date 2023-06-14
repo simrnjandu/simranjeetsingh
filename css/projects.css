@@ -1,15 +1,24 @@
+body {
+  font-family: "Inter", sans-serif;
+  max-width: 120rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  color: #241623;
+  background: #eef2f4;
+}
+
 .heading {
-  display: fixed;
+  /* display: fixed; */
   /* align-items: center; */
   /*padding: 0 10%;*/
-  height: 100vh;
+  /* height: 100vh; */
   color: #081b29;
   z-index: 101;
-  position: fixed;
+  /* position: fixed; */
   top: 10%;
   left: 0;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 60px;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -21,159 +30,167 @@
   line-height: 1.2;
 }
 
-.carousel {
-  display: fixed;
-  width: 90%;
-  left: 10%;
-  overflow: auto;
+/* Globals */
 
-  padding-top: 0;
-  position: fixed;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  align-items: center;
+h1 {
+  font-weight: 900;
+  font-size: 2.7rem;
+  max-width: 20ch;
 }
 
-.carousel__container {
-  position: relative;
-  display: inline-flex;
-  white-space: nowrap;
-  margin: 70px 0px;
-  padding-bottom: 10px;
-  display: inline-block;
+p {
+  max-width: 60ch;
 }
 
-
-
-.carousel-item {
-  width: 250px;
-  height: 320px;
-  border-radius: 20px;
-  background-color: #95bcd6;
-  overflow: hidden;
-  margin-right: 10px;
-  margin-top: 10px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition: 1000ms all;
-  transition: 1000ms all;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
-  position: relative;
+a {
+  color: currentcolor;
 }
 
-.carousel-item:hover ~ .carousel-item {
-  -webkit-transform: translate3d(50px, 0, 0);
-  transform: translate3d(50px, 0, 0);
-}
-
-.carousel__container:hover .carousel-item {
-  opacity: 0.3;
-}
-
-.carousel__container:hover .carousel-item:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.carousel-item__img {
-  width: 250px;
-  height: 320px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.carousel-item__details {
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(rgba(0, 0, 0, 0.9)),
-    to(rgba(0, 0, 0, 0))
+/* Utilities */
+.auto-grid {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 25rem), 1fr)
   );
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  font-size: 15px;
-  opacity: 0;
-  -webkit-transition: 450ms opacity;
-  transition: 450ms opacity;
-  padding: 10px;
-  position: absolute;
-  top: 45px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  grid-gap: var(--auto-grid-gap, 0);
+  padding-top: 20px;
+  /* padding: 0; */
 }
 
-.carousel-item__details:hover {
-  opacity: 1;
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
 }
 
-.carousel-item__details span {
-  /* width: 10px;
-  height: 10px; */
-  font-size: 0.9rem;
-  color: #2ecc71;
-  /* background-color: white; */
+/* Composition */
+.team {
+  --flow-space: 2em;
 }
 
-.carousel-item__details .controls {
-  padding-top: 180px;
-  z-index: 105;
-}
-
-.carousel-item__details .carousel-item__details--title,
-.carousel-item__details--subtitle {
-  color: #fff;
-  margin: 5px 0;
-}
-
-.carousel-item__details--title a {
+/* Blocks */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 1/1;
+  position: relative;
+  padding: 1.5rem;
+  color: #ffffff;
+  backface-visibility: hidden;
   text-decoration: none;
+  overflow: hidden;
 }
 
-
-#scrollbar1::-webkit-scrollbar {
-  width: 12px;
-}
-
-#scrollbar1::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: 1.5px solid #7e7e7e;
-  border-radius: 8px;
-}
-
-#scrollbar1::-webkit-scrollbar-thumb {
-  background-color: #f1f1f1;
-  border: 2px solid #616161;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: 1.5px solid #7e7e7e;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #f1f1f1;
-  border: 2px solid #616161;
-  border-radius: 8px;
-}
-
-.link {
-  position: absolute;
+.profile::before,
+.profile::after {
+  content: "";
   width: 100%;
   height: 100%;
+  position: absolute;
+  /*inset: 0;*/
   top: 0;
   left: 0;
-  z-index: 104;
+}
+
+.profile::before {
+  background: linear-gradient(
+    to top,
+    hsl(0 0% 0% / 0.79) 0%,
+    hsl(0 0% 0% / 0.787) 7.8%,
+    hsl(0 0% 0% / 0.779) 14.4%,
+    hsl(0 0% 0% / 0.765) 20.2%,
+    hsl(0 0% 0% / 0.744) 25.3%,
+    hsl(0 0% 0% / 0.717) 29.9%,
+    hsl(0 0% 0% / 0.683) 34.3%,
+    hsl(0 0% 0% / 0.641) 38.7%,
+    hsl(0 0% 0% / 0.592) 43.3%,
+    hsl(0 0% 0% / 0.534) 48.4%,
+    hsl(0 0% 0% / 0.468) 54.1%,
+    hsl(0 0% 0% / 0.393) 60.6%,
+    hsl(0 0% 0% / 0.31) 68.3%,
+    hsl(0 0% 0% / 0.216) 77.3%,
+    hsl(0 0% 0% / 0.113) 87.7%,
+    hsl(0 0% 0% / 0) 100%
+  );
+  transition: 300ms opacity linear;
+}
+
+/* .profile::after {
+  background: linear-gradient(
+    45deg,
+    hsl(5 97% 63% / 0.7) 0,
+    hsl(5 97% 63% / 0) 100%
+  );
+  opacity: 0;
+  transition: 300ms opacity linear;
+} */
+
+.profile > * {
+  z-index: 1;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: -1;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter 200ms ease, transform 250ms linear;
+}
+
+.profile h2,
+.profile p {
+  transform: translateY(2ex);
+}
+
+.profile h2 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: 0.03ch;
+  transition: 300ms transform ease;
+}
+
+.profile p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.profile p {
+  opacity: 0;
+  transition: 300ms opacity linear, 300ms transform ease-in-out;
+}
+
+.profile:focus {
+  outline: 0.5rem solid white;
+  outline-offset: -0.5rem;
+}
+
+.profile:hover :is(h2, p),
+.profile:focus :is(h2, p) {
+  transform: none;
+}
+
+.profile:hover::after,
+.profile:focus::after,
+.profile:hover::before,
+.profile:focus::before {
+  opacity: 0.7;
+}
+
+.profile:hover p,
+.profile:focus p {
+  opacity: 1;
+  transition-delay: 200ms;
+}
+
+.profile:hover img,
+.profile:focus img {
+  filter: grayscale(0);
+  transform: scale(1.05) rotate(1deg);
 }
