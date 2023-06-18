@@ -71,7 +71,8 @@ body {
 }
 
 .home-content {
-    max-width: 800px;
+    max-width: 40%;
+    /* width: 100%; */
 }
 
 .home-content h1{

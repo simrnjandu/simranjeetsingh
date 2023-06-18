@@ -52,7 +52,7 @@ a {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(var(--auto-grid-min-size, 25rem), 1fr)
+    minmax(var(--auto-grid-min-size, 20rem), 1fr)
   );
   grid-gap: var(--auto-grid-gap, 0);
   padding-top: 20px;
