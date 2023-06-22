@@ -69,6 +69,10 @@ a {
 }
 
 /* Blocks */
+.project {
+  padding: 3px;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -80,6 +84,7 @@ a {
   backface-visibility: hidden;
   text-decoration: none;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .profile::before,
