@@ -38,9 +38,9 @@ h1 {
   max-width: 20ch;
 }
 
-p {
+/* p {
   max-width: 60ch;
-}
+} */
 
 a {
   color: currentcolor;

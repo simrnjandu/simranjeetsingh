@@ -17,12 +17,23 @@
    color: #081b29;
 }
 
+.page-body h5{
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+   color: #081b29;
+}
+
 .page-body p{
     text-align: justify;
     width: 80%;
 }
 
-.page-body img 
-{
+.images {
     width: 80%;
 }
+
+ .page-body img 
+{
+    width: 100%;
+} 
