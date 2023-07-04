@@ -1,67 +1,39 @@
-.body-content{
-    max-width: 120rem;
-    padding: 2rem 1.5rem;
-    margin: 0 auto;
-    color: #241623;
-    padding-left: 10%;
-    padding-right: 10%;
+.heading h3 {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
 }
 
-.heading {
-    display: fixed;
-    align-items: center;
-    /*padding: 0 10%;*/
-    /* height: 100vh; */
-    color: #081b29;
-    z-index: 101;
-    /* position: fixed; */
-    top: 10%;
-    left: 0;
-    width: 100%;
-    padding-top: 90px;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  
-  .heading_title {
-    position: relative;
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
+.page-body{
+ padding-top: 40px;
+ width: 100%;
+}
 
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active_collapse, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .collapsible:after {
-    content: '\002B';
-    color: white;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active_collapse:after {
-    content: "\2212";
-  }
-  
-  .content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
-  }
+.page-body h4{
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+ color: #081b29;
+}
+
+.page-body h5{
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+ color: #00abf0;
+}
+
+.page-body p{
+  text-align: justify;
+  width: 80%;
+}
+
+.images {
+  width: 80%;
+}
+
+.page-body img 
+{
+  width: 100%;
+} 

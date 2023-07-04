@@ -73,7 +73,7 @@
         <br>
 
         <h5>Constitutive Model</h5>
-        <p><b>The Oldroyd-B</b> constitutive model is used, which introduces the so called "extra-stress tensor" or the upper-convected time derivative of the rate-of-strain tensor. This tensor accounts for the material's elasticity and relates it to the deformation rate.</p>
+        <p><b>The Oldroyd-B</b> constitutive model is used for the fluid (polymeric solution), which introduces the so called "extra-stress tensor" or the upper-convected time derivative of the rate-of-strain tensor. This tensor accounts for the material's elasticity and relates it to the deformation rate.</p>
         <p>The constitutive equation of the Oldroyd-B model:</p>
         <img src="drop_simul/oldroyd_b_eqn.png" alt="oldroyd_b_eqn" style="width : 255px;">
         <p>where <b>𝜏</b> is the total stress tensor, μ is the dynamic viscosity, <b>U</b> is the velocity vector, λ is the relaxation time, and μ<sub>e</sub> represents the extra stress tensor.</p>
@@ -82,22 +82,21 @@
         <img src="drop_simul/extra_stress_tensor.png" alt="oldroyd_b_eqn" style="width : 175px;">
         <p>where η is the relaxation modulus</p>
 
+        <p>Air is modelled as a Newtonian Fluid.</p>
+
+
         <br>
 
         <h5>Boundary Conditions and Initial Conditions</h5>
-        <p></p>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore aliquid eveniet incidunt aperiam architecto quas ullam voluptatibus libero rem, cupiditate nemo sed reprehenderit officia aspernatur porro, delectus cum nisi?</p>
+        <img src="drop_simul/BCS.png" alt="oldroyd_b_eqn" style="width : 80%;">
+        <img src="drop_simul/Ini_Fields.png" alt="oldroyd_b_eqn" style="width : 80%;">
         
         <h5>Grid and Numerical Solution Parameters</h5>
         <img src="drop_simul/mesh.png" alt="oldroyd_b_eqn" style="width : 80%;">
 
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt inventore aliquid eveniet incidunt aperiam architecto quas ullam voluptatibus libero rem, cupiditate nemo sed reprehenderit officia aspernatur porro, delectus cum nisi?</p>
-        <br>
-
         <h4>Results</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus voluptatibus aspernatur quas? Laboriosam, officia dolorem sequi doloribus natus cupiditate quaerat accusantium dolor obcaecati laudantium omnis itaque aliquid ex iusto aperiam.</p>
+        <p>PAM-water solution drops of 500 PPM, 1000 PPM, 1500 PPM and 2000 PPM concentrations of PAM are considered at impact velocities - 0.3mps, 0.5mps, 0.75mps, 1.00mps, 1.20mps and 1.50mps</p>
+
         <table class="images">
           <tr>
             <th>2000 PPM PAM at 0.30 m/s</th>
@@ -109,7 +108,16 @@
           </tr>
         </table>
 
-        <img src="drop_simul/2000 PPM 0.5mps.svg" alt="oldroyd_b_eqn" style="width : 80%;">
+        <table class="images">
+          <tr>
+            <td><img src="drop_simul/Drop Radius (m) vs Time (s) for 2000 PPM.svg" alt="oldroyd_b_eqn" style="width : 100%;"></td>
+            <td><img src="drop_simul/Retraction Velocity (m_s) vs. Weber Number for 2000 PPM.svg" alt="oldroyd_b_eqn" style="width : 100%;"></td>
+          </tr>
+        </table>
+
+        <p>NOTE: Due to pending publication, the experimentally obtained values, comprehensive numerical results and validation data are not shared publicly.</p>
+         
+        
 
     </section>
 
@@ -117,6 +125,9 @@
         <a href="#"><i class='bx bxl-linkedin-square'></i></a>
         <a href="#"><i class='bx bxl-github' ></i></a>
     </div> 
+    <div style="text-align: center;">
+      <span>&copy; 2023 Simranjeet Singh</span>
+    </div>
 </body>
 
 </html>
