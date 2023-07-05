@@ -1,0 +1,39 @@
+.heading h3 {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+
+.page-body{
+ padding-top: 40px;
+ width: 100%;
+}
+
+.page-body h4{
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+ color: #081b29;
+}
+
+.page-body h5{
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+ color: #00abf0;
+}
+
+.page-body p{
+  text-align: justify;
+  width: 80%;
+}
+
+.images {
+  width: 80%;
+}
+
+.page-body img 
+{
+  width: 100%;
+} 
