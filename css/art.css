@@ -41,6 +41,7 @@ body {
   }
 
   h3 {
+    font-size: 1.2rem;
     color: #00abf0;
     }
   
@@ -54,7 +55,7 @@ body {
     display: grid;
     grid-template-columns: repeat(
       auto-fill,
-      minmax(var(--auto-grid-min-size, 20rem), 1fr)
+      minmax(var(--auto-grid-min-size, 14rem), 1fr)
     );
     grid-gap: var(--auto-grid-gap, 0);
     padding: 0;
@@ -67,8 +68,8 @@ body {
   /* Composition */
   .gallery-outer {
     --flow-space: 2em;
-    top: 10%;
-    padding-top: 50px;
+    top: 2%;
+    padding-top: 15px;
   }
   
   /* Blocks */
@@ -96,28 +97,7 @@ body {
     left: 0;
   }
   
-  .item::before {
-    background: linear-gradient(
-      to top,
-      hsl(0 0% 0% / 0.79) 0%,
-      hsl(0 0% 0% / 0.787) 7.8%,
-      hsl(0 0% 0% / 0.779) 14.4%,
-      hsl(0 0% 0% / 0.765) 20.2%,
-      hsl(0 0% 0% / 0.744) 25.3%,
-      hsl(0 0% 0% / 0.717) 29.9%,
-      hsl(0 0% 0% / 0.683) 34.3%,
-      hsl(0 0% 0% / 0.641) 38.7%,
-      hsl(0 0% 0% / 0.592) 43.3%,
-      hsl(0 0% 0% / 0.534) 48.4%,
-      hsl(0 0% 0% / 0.468) 54.1%,
-      hsl(0 0% 0% / 0.393) 60.6%,
-      hsl(0 0% 0% / 0.31) 68.3%,
-      hsl(0 0% 0% / 0.216) 77.3%,
-      hsl(0 0% 0% / 0.113) 87.7%,
-      hsl(0 0% 0% / 0) 100%
-    );
-    transition: 300ms opacity linear;
-  }
+
   
 
   
@@ -129,12 +109,12 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 4px;
+    left: 4px;
     margin: 0;
     z-index: -1;
     object-fit: cover;
-    filter: grayscale(1);
+    /*filter: grayscale(1);*/
     transition: filter 200ms ease, transform 250ms linear;
   }
   
@@ -164,28 +144,4 @@ body {
   .item:focus {
     outline: 0.5rem solid white;
     outline-offset: -0.5rem;
-  }
-  
-  .item:hover :is(h2, p),
-  .item:focus :is(h2, p) {
-    transform: none;
-  }
-  
-  .item:hover::after,
-  .item:focus::after,
-  .item:hover::before,
-  .item:focus::before {
-    opacity: 0.7;
-  }
-  
-  .item:hover p,
-  .item:focus p {
-    opacity: 1;
-    transition-delay: 200ms;
-  }
-  
-  .item:hover img,
-  .item:focus img {
-    filter: grayscale(0);
-    transform: scale(1.05) rotate(1deg);
   }
